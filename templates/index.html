@@ -15,7 +15,8 @@
 <body>
 
     <i class="bi bi-list menu-mobile"></i>
-
+    
+    <!-- Adição dos links ativos, menu e foto no lado esquerdo -->
     <aside id="header">
         <section class="profile">
             <img src="../static/img/Selma.png" alt="Foto da Selma">
@@ -63,7 +64,8 @@
     </aside>
 
     <main id="main">
-
+        
+        <!-- Imagem de fundo da pg e arraste para baixo -->
         <section id="inicio" class="row m-0 p-0">
             <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
                 <h2 class="text-white text-shadow">Selma Souza</h2>
@@ -79,7 +81,8 @@
             </div>
 
         </section>
-
+        
+        !-- Adição das informações pessoais -->
         <section class="container mt-5" id="sobre">
             <div class="row w-100">
                 <div class="col-md-12" data-anime="down">
@@ -151,7 +154,8 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- Adição de habilidades e soft skills -->
         <section class="mt-5 section-bg" id="habilidades">
             <div class="container pb-5">
                 <h2 class='pt-5'>Habilidades</h2>
@@ -268,7 +272,8 @@
             </div>
 
         </section>
-
+        
+        <!-- Adição de currículo educacional e profissional -->
         <section class="mt-5 cv" id="curriculo">
 
             <div class="container pb-5">
@@ -318,7 +323,8 @@
             </div>
 
         </section>
-
+        
+        <!--Adição do portfólio com experiência em desenvolvimento web. -->
         <section class="section-bg mt-5" id="portfolio">
             <div class="container pb-5 pt-5" data-anime="left">
 
@@ -373,7 +379,7 @@
                                             <h5 class="card-title">Teste_Portfolio</h5>
                                             <p class="card-text">Primeiro site com HTML e CSS.</p>
                                             <div class="d-flex justify-content-center">
-                                                <a href="https://selma-souza.github.io/" target='_blank'
+                                                <a href="https://selma-souza.github.io/testeportfolio/" target='_blank'
                                                     class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
                                             </div>
                                         </div>
@@ -404,6 +410,8 @@
                         </div>
 
                     </div>
+                    
+                    <!-- Adição dos botões laterais para correr o carousel -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -417,7 +425,8 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- Localização e contato -->
         <section class="pt-5 pb-5" id="contato">
 
             <div class="container mb-5">
@@ -485,7 +494,8 @@
             </div>
 
         </section>
-
+        
+        <!-- Tira a mensagem de sucesso depois de 5 segundos -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
