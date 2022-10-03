@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -26,11 +25,11 @@ class Contato:
         self.email = email
         self.mensagem = mensagem
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route('/send', methods=['GET', 'POST'])
+@app.route("/send", methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
         formContato = Contato(
@@ -40,20 +39,19 @@ def send():
         )
 
         msg = Message(
-            subject = f'{formContato.nome} te enviou uma mensagem do portfólio',
+            subject = f"{formContato.nome} te enviou uma mensagem do portfólio",
             sender = app.config.get("MAIL_USERNAME"),
-            recipients = ['kdsselma@gmail.com', app.config.get("MAIL_USERNAME")],
+            recipients = ["kdsselma@gmail.com", app.config.get("MAIL_USERNAME")],
             body = f'''
             
             {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte mensagem:
-
             {formContato.mensagem} 
             
             '''
         )
         mail.send(msg)
         flash('Mensagem enviada com sucesso!')
-    return redirect('/')
+    return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=True)
